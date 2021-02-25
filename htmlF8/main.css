@@ -1,0 +1,25 @@
+.class1{
+    color: red;
+}
+.class2{
+    font-size: 28px;
+}
+.container div div{
+    color: blue;
+}
+h1#id-list1.class-list1{
+color: violet;
+}
+.box{
+    width: calc(50%);
+    height: 50vh;
+    color: red;
+    background-image:linear-gradient(to right bottom , red 10%, yellow 20%);/*gradient theo %*/
+    background-image:repeating-linear-gradient(to right top , red 10%, yellow 20%);/*lap lai gradient*/
+}
+.box::after{
+ content: "This the content: " attr(data-title);
+}
+#Google::after{
+    content: "("attr(href)")";
+}
