@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Psuedo-class Lớp giả</title>
+        <style>
+            :root{
+                --doai-lon-nhat: 450px;
+            }
+            #google-link:hover{
+                color: red;
+            }
+            #google-link:active{
+                color: yellow;
+            }
+            #test-div{
+                width: var(--doai-lon-nhat);
+                background-color: salmon;
+            }
+        </style>
+    </head>
+    <body>
+        <a id="google-link" href="http://google.com.vn">google:</google></a>
+        <div id ="test-div" >
+            <p>Test text in div tag</p>
+        </div>
+    </body>
+</html>
