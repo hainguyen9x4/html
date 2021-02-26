@@ -7,8 +7,7 @@
 .box{
 width: 160px;
 height: 60px;
-display: flex;
-flex-direction: row;  
+display: flex; 
 align-items: stretch;
 }
 .box1{
@@ -22,10 +21,18 @@ align-items: stretch;
     margin-left: 10px;
 }
 .box3{
+    width: 260px;
+height: 160px;
     background-color: green;
     color: white;
-    padding: 10px 12px 13px 15px;
-    margin-left: 10px;
+    padding: 20px;
+    border: 20px dashed blue;
+    background-clip: content-box;
+    box-sizing: border-box;
+}
+.box01{
+    padding: 10px;
+    background-color: yellowgreen;
 }
         </style>
     </head>
@@ -40,5 +47,8 @@ align-items: stretch;
             <p> tag box3</p>
         </div>
         <h1 id="h1-text">Xin chao CSS <br/> Nguyen van hai 2021</h1>
+        <div class="box box01" >
+            <p>Nội dung bài viết</p>
+        </div>
     </body>
 </html>
