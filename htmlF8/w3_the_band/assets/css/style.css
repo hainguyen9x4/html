@@ -4,3 +4,29 @@
     margin: 0;
     box-sizing: border-box;
 }
+/*
+1. vị trí
+2. kích thước
+3. Màu sắc
+4.Kiểu dáng
+*/
+#main{
+
+}
+
+#header{
+height: 46px;
+background-color: #000;
+}
+
+#slider{
+
+}
+
+#content{
+
+}
+
+#footer{
+
+}
