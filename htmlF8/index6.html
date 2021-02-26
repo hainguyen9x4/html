@@ -1,26 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html style="height: 2000px;">
     <head>
         <title>Position</title>
         <style>
-            h1{
+            .h1-style{
                 position: relative;
-                top: 0px;
+                top: 140px;
                 background-color: rosybrown;
             }
             .h3style{
                 position: absolute;
                 top: 0px;
             }
+            .menu-style{
+                position:fixed;
+                top: 200px;
+                left: 0px;
+                right: opx;
+                background: brown;
+            }
         </style>
     </head>
     <body>
-        <h1>H1 content</h1>
+        <h1 class="h1-style">H1 content</h1>
         <h3>relative</h3>
         <div class="h3style">
             <h3>absolute</h3>
-        </div>        
-        <h3>Fixed</h3>
+        </div> 
+        <div class="menu-style">
+            <h1>Fixed location menu</h1>
+        </div>       
+        
         <h3>Sticky</h3>
     </body>
 </html>
