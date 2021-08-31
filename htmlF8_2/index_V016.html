@@ -1,5 +1,5 @@
 <!--
-    Css function
+    Variable of CSS
 -->
 <!DOCTYPE html>
 <html lang="en" style="font-size: 150%;">
@@ -15,7 +15,7 @@
             
         }
         #id1{
-           
+            color: var(--main-color);
             font-size: 1rem;
         }
         #tbl1{
@@ -23,34 +23,19 @@
             font-size: 50%;
         }
         #box1{
-            /*background-image: linear-gradient(red,yellow);*/
-            background-color:red;
+            background-color: red;
             width: 50%;
-            height: calc(10px*10);
+            height: 100px ;
         }
-        #id1:hover{
-            background-color: yellow;
-        }
-        #id1::first-letter{
-            font-size: 70px;
-        }
-        .tbn:active{
-            color: blue;
-        }
-        #tbl1:first-child{
-            color: rgb(130, 238, 220);
-        }
-
     </style>
 </head>
 <body>
     <h2 id="id1">HTML tag thông dụng</h2>
-    <h2 id="id2">The test text</h2>
     <div style="width: 200px; height: 100px">
     <div id="box1"></div>
     </div>
     <div style="font-size: 2rem;">
-    <table id="tbl1" class="tbn">
+    <table id="tbl1">
         <thead>
             <th>No.</th>
             <th>Name</th>
