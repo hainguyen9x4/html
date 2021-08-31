@@ -2,25 +2,40 @@
     Variable of CSS
 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="font-size: 150%;">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-    <meta http-equiv="refresh" content="30">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--<meta http-equiv="refresh" content="30">-->
     <title>Document</title>
     <style>
         :root{
             --main-color: red;
+            
         }
         #id1{
             color: var(--main-color);
+            font-size: 1rem;
+        }
+        #tbl1{
+            background-color: violet;
+            font-size: 50%;
+        }
+        #box1{
+            background-color: red;
+            width: 50%;
+            height: 100px ;
         }
     </style>
 </head>
 <body>
     <h2 id="id1">HTML tag thông dụng</h2>
-    <table>
+    <div style="width: 200px; height: 100px">
+    <div id="box1"></div>
+    </div>
+    <div style="font-size: 2rem;">
+    <table id="tbl1">
         <thead>
             <th>No.</th>
             <th>Name</th>
@@ -48,6 +63,7 @@
             </tr>
         </tbody>
     </table>
+    </div>
     <!--
         Comment
     -->
