@@ -59,6 +59,7 @@ body {
     display: flex;
     flex-direction: row;
 }
+
 .column-item{
     padding: 0px 16px;
     line-height: 1.5;
@@ -79,6 +80,12 @@ body {
  display: flex;
  flex-direction: row;
  justify-content: space-around;
+}
+/* màn hình nhỏ hơn 600px thì chuyển sang column */
+@media (max-width: 600px) {
+    .feature-layout{
+        flex-direction: column;
+    }
 }
 .feature-item{
  padding: 12px 16px;
@@ -103,6 +110,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 .wrap-layout__item{
  background-color: #EF5122;
@@ -144,12 +152,28 @@ body {
 .chart-layout__item{
     background-color: red;
     width: 80px;
-    height: var(--percent);
+    height:0;
     margin: 10px;
     color: white;
     font-size: 18px;
     font-weight: 300;
     text-align: center;
+    animation: chartGrow 0.5s forwards;
+    /* animation-duration: 3s;
+    animation-name: chartGrow;
+    animation-fill-mode: forwards; */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+@keyframes chartGrow {
+    from{
+        opacity: 0;
+        height:0;
+    }
+    to{
+        opacity: 1;
+        height: var(--percent);
+    }
+    
 }
 /*End*/
 .the-end{
