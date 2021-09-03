@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Helvetica Neue";
+    background-color: #f4f4f5;
+  }
+
+body > div{
+    margin: auto;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 12px 48px;
+    border-radius: 50px;
+    cursor: pointer;
+    min-width: 120px;
+    user-select: none;
+    transition: opacity .2s ease, active .2s ease;/*Hover, active effect*/
+}
+.btn:hover{/*Hover effect*/
+    opacity: 0.7;
+}
+.btn:active{/*Active effect*/
+    opacity: 1;
+}
+.btn + .btn {
+    margin-left: 16px;
+}
+.btn--success{
+background-color: green;
+}
+.btn--warn{
+    background-color: orange;
+}
+.btn--error{
+    background-color: red;
+}
+.btn--disable{
+    opacity: 0.5 !important;/*Do uu tien cao nhat*/
+    cursor: default;
+}
+.btn--size-s{
+    padding: 8px 32px;
+}
+.btn--size-l{
+padding: 16px 52px;
+}

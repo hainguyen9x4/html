@@ -1,0 +1,26 @@
+body >div{
+    
+    margin: auto;
+    display: flex;
+}
+.btn{
+    min-width: 120px;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 48px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn + .btn {
+    margin-left: 16px;
+}
+.btn--success{
+background-color: green;
+}
+.btn--warn{
+    background-color: orange;
+}
+.btn--error{
+    background-color: red;
+}
