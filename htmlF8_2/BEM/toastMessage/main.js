@@ -11,8 +11,9 @@ if(toast){
     const delay = (duration/1000).toFixed(2);
     div.classList.add("toast", `toast--${type}`);
     div.style.animation=`moveIn ease .3s, fadeOut linear 1s ${delay}s forwards`;
+
     //auto remove
-    const idTimer = setTimeout(function(){
+    let idTimer = setTimeout(function(){
        toast.removeChild(div)
     },duration + 1000);
     //remove by close
@@ -21,6 +22,16 @@ if(toast){
             toast.removeChild(div)
             clearTimeout(idTimer);
         }
+    }
+    div.onmouseenter=function(){
+        clearTimeout(idTimer);
+        div.style.animationPlayState = 'paused';
+    }
+    div.onmouseleave=function(){
+        div.style.animationPlayState = 'running';
+        idTimer = setTimeout(function(){
+            toast.removeChild(div)
+         },duration + 1000);
     }
     //set icon
     var icon ={
