@@ -25,7 +25,8 @@ body > div{
     justify-content: space-between;
     align-items: center;
     /* transform: translateX(calc(100% + 32px)); */
-    animation: moveIn 1s ease, moveOut 1s linear 3s forwards;
+    /* animation: moveIn 0.5s ease, fadeOut 1s linear 3s forwards; */
+    transition: all linear 0.5s;
 }
 @keyframes moveIn{
     from{
@@ -37,7 +38,7 @@ body > div{
         transform: translateX(0);
     }
 }
-@keyframes moveOut{
+@keyframes fadeOut{
     from{
         opacity: 1;
     }
@@ -60,8 +61,8 @@ body > div{
     /* border-left: 2px solid #333; */
 }
 .toast--success{
-    background-color: rgba(0, 255, 0, 0.3);
-    border-color: green;
+    /* background-color: rgba(0, 255, 0, 0.3); */
+    border-color: #47d864;
 }
 .toast__content__title{
     color: #333;
@@ -70,21 +71,86 @@ body > div{
 .toast__content__mes{
     color: #333;
 }
+.toast--success .toast__icon {
+    color: #47d864;
+  }
 .toast--info{
-    background-color: rgba(0, 0, 255, 0.4);
-    border-color: blue;
+    /* background-color: rgba(0, 0, 255, 0.4); */
+    border-color: #2f86eb;
 }
+.toast--info .toast__icon {
+    color: #2f86eb;
+  }
 .toast--warn{
-    background-color: rgba(255, 255, 0, 0.5);
-    border-color: yellow;
+    /* background-color: rgba(255, 255, 0, 0.5); */
+    border-color:#ffc021;
 }
+.toast--warn .toast__icon {
+    color: #ffc021;
+  }
 .toast--error{
-    background-color: rgba(255, 0, 0, 0.8);
-    border-color: red;
+    /* background-color: rgba(255, 0, 0, 0.8); */
+    border-color: #ff623d;
 }
-
+.toast--error .toast__icon {
+    color: #ff623d;
+  }
 #toast{
     position: fixed;
     top: 32px;
     right: 32px;
+}
+/* Button */
+#block-btn{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 150px;
+    left: 25px;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 12px 48px;
+    border-radius: 50px;
+    cursor: pointer;
+    min-width: 120px;
+    user-select: none;
+    transition: opacity .2s ease, active .2s ease;/*Hover, active effect*/
+    text-align:  center;
+}
+.btn:hover{/*Hover effect*/
+    opacity: 0.7;
+}
+.btn:active{/*Active effect*/
+    opacity: 1;
+}
+.btn + .btn {
+    margin-top: 16px;
+}
+.btn--success{
+background-color: green;
+}
+.btn--info{
+    background-color: blue;
+}
+.btn--warn{
+    background-color: orange;
+}
+.btn--error{
+    background-color: red;
+}
+.btn--disable{
+    opacity: 0.5 !important;/*Do uu tien cao nhat*/
+    cursor: default;
+}
+.btn--size-s{
+    padding: 8px 32px;
+}
+.btn--size-l{
+padding: 16px 52px;
 }
