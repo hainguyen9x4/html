@@ -1,0 +1,30 @@
+:root{
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:#333;
+}
+*{
+    /* Tất cả sẽ kế thừa từ html tag là border-box */
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;/*1.6rem => 1.6*16px*62.6% = 16px*/
+    box-sizing: border-box;
+    /*Cần nhúng cdn font từ google*, nếu roboton chưa tải xong thì dùng chủng chữ sans-serif-không có chân*/
+    font-family: 'Roboto', sans-serif;
+}
+/* Chuẩn bị cho reponsive */
+.grid{
+    width: 1200px;
+    max-width: 100%;
+}
+.grid__full-width{
+    /* nếu ko muốn dùng width =1200px nữa */
+    width: 100%;
+}
+.grid__row{
+    /* các element trên 1 dòng, tự động xuống dòng khi màn hình nhỏ lại */
+    display: flex;
+    flex-wrap: wrap;
+}
