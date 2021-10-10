@@ -1,15 +1,15 @@
-:root{
+ :root{/* nơi khai báo global biến css */
     --white-color:#fff;
     --black-color:#000;
     --text-color:#333;
 }
-*{
+*{/*css cho tất cả*/
     /* Tất cả sẽ kế thừa từ html tag là border-box */
-    box-sizing: inherit;
+    box-sizing: inherit;/*kế thừa từ những thẻ chứa nó*/
 }
 html{
     font-size: 62.5%;
-    line-height: 1.6rem;/*1.6rem => 1.6*16px*62.6% = 16px*/
+    line-height: 1.6rem;/*1.6rem => 1.6*16px*62.6% = 16px*- chiều cao dòng/
     box-sizing: border-box;
     /*Cần nhúng cdn font từ google*, nếu roboton chưa tải xong thì dùng chủng chữ sans-serif-không có chân*/
     font-family: 'Roboto', sans-serif;
@@ -17,13 +17,14 @@ html{
 /* Chuẩn bị cho reponsive */
 .grid{
     width: 1200px;
-    max-width: 100%;
+    max-width: 100%;/*với màn hình nhỏ hơn 1200px thì 100% chính là bằng kích thước màn hình đó*/
+    margin: 0px auto;/*Căn giữa*/
 }
-.grid__full-width{
+.grid__full-width{/*class này là edit của class grid*/
     /* nếu ko muốn dùng width =1200px nữa */
     width: 100%;
 }
-.grid__row{
+.grid__row{/*thằng nào thuộc class này thì sẽ hiển thị trên 1 hàng ngang, và có thể xuống dòng.*/
     /* các element trên 1 dòng, tự động xuống dòng khi màn hình nhỏ lại */
     display: flex;
     flex-wrap: wrap;
